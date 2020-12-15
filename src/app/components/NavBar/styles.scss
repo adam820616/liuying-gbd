@@ -1,0 +1,60 @@
+.nav {
+  --main-color: #D3D3D3;
+  --background-color: #000000;
+  --menu-bg-color: #000000;
+  --height: 82px;
+  --slider-width: 100%;
+  --link-color: #ffffff;
+
+  display: grid;
+  grid-template-columns: minmax(min-content, max-content) auto;
+  align-items: center;
+  background-color: var(--background-color);
+  font-family: inherit;
+  height: var(--height);
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+  z-index: 9999;
+
+  & * {
+    outline-width: 1px;
+    outline-color: var(--main-color);
+  }
+
+  & > a:first-child {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--main-color);
+    margin-right: 1em;
+  }
+
+  &--hidden {
+    top: calc(var(--height) * -1);
+  }
+
+  &--animate {
+    transition: top 200ms ease-in;
+
+    &--hidden {
+      @extend .nav--hidden;
+
+      transition: top 300ms ease-out;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav,
+  .nav--animate {
+    justify-content: space-between;
+
+    & > a:first-child {
+      margin-right: 0;
+    }
+  }
+}

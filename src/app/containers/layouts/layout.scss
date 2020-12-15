@@ -1,0 +1,45 @@
+@import "reset";
+
+$bgColorBlack:#000000;
+$bgColorGray:#2A2A2A;
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: $bgColorBlack;
+}
+
+body {
+  max-width: 1440px;
+}
+
+.layoutContainer {
+  padding: 0 48px;
+  min-height: 500px;
+  background-color:$bgColorGray;
+}
+
+.layoutHeader {
+  padding: 0 48px;
+}
+
+.layoutFooter {
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .layoutContainer {
+    padding: 0 36px;
+    min-height: 400px;
+    background-color:$bgColorGray;
+  }
+
+  .layoutHeader {
+    padding: 0 36px;
+  }
+
+  .layoutFooter {
+    padding: 0 36px;
+  }
+}
