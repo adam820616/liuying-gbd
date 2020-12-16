@@ -24,9 +24,43 @@ $headerHeight: 82px;
   height:$headerHeight;
 }
 
+.button_group {
+  padding: 6px 0 0;
+  min-width: 240px;
+}
+
+.button_group .lg_button {
+  width: 89px;
+  border-radius: 3px;
+  display: inline-block;
+  background: #ffffff;
+  border: 0 !important;
+  padding: 9px 0 !important;
+  margin: 0 1.2em !important;
+  text-align: center;
+  color: #000000 !important;
+}
+
+// Button
+.button_group .primary {
+  color: #ffffff !important;
+  background-color: #BB0000 !important;
+}
+
 @media (max-width:768px){
   .logo {
     background-image: url('../../../../assets/images/logo_red.svg');
+  }
+
+  .button_group {
+    padding: 0;
+    width: 90%;
+    min-width: 340px;
+  }
+
+  .button_group .lg_button {
+    width: 30%;
+    margin: 0 16px 0 0 !important;
   }
 }
 

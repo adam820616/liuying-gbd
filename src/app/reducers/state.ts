@@ -1,10 +1,10 @@
-// import { RecommendModel } from 'app/models';
+import { RecommendModel } from 'app/models';
 
-// export interface RootState {
-//   items: RootState.RecommendState;
-//   router?: any;
-// }
+export interface RootState {
+  recommend: RootState.RecommendState;
+  router?: any;
+}
 
-// export namespace RootState {
-//   export type RecommendState = RecommendModel[];
-// }
+export namespace RootState {
+  export type RecommendState = RecommendModel[];
+}

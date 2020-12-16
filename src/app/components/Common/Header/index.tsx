@@ -9,6 +9,11 @@ const navLogo = <a href="#" ><span className="logo" /></a>
 //   menuBgColor: '#edf7f3'
 // }
 
+const topLinks = <div className="button_group">
+  <a className="lg_button" href="#">Login</a>
+  <a className="lg_button primary" href="#">Sign Up</a>
+</div>
+
 const leftLinks = <>
   <a href='#'>Home</a>
   <a href='#'>RPG</a>
@@ -28,6 +33,7 @@ export const Header = () => {
       menuClassName="navbar--menu"
       brand={navLogo}
       // theme={navTheme}
+      topLinks={topLinks}
       leftLinks={leftLinks}
       rightLinks={rightLinks}
     />

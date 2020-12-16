@@ -7,6 +7,7 @@ interface NavLinksProps {
   customClassName: string
   isOpen: boolean
   shouldAnimate: boolean
+  topLinks?: JSX.Element
   leftLinks?: JSX.Element
   rightLinks?: JSX.Element
 }
@@ -15,6 +16,7 @@ const NavLinks: React.FC<NavLinksProps> = ({
   customClassName,
   isOpen,
   shouldAnimate,
+  topLinks,
   leftLinks,
   rightLinks
 }) => {
@@ -30,6 +32,8 @@ const NavLinks: React.FC<NavLinksProps> = ({
 
   return (
     <div className={`nav-links ${otherClassNames} ${customClassName}`.trim()}>
+      <span className="nav-links__group left"></span>
+      <span className="nav-links__group right">{topLinks}</span>
       <span className="nav-links__group left">{leftLinks}</span>
       <span className="nav-links__group right">{rightLinks}</span>
     </div>

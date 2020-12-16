@@ -13,11 +13,16 @@
     a {
       text-decoration: none;
       color: var(--link-color);
-      margin: 0 0.5em;
+      font-size: 13px;
+      font-family: Helvetica;
+      margin: 0 1em;
+      padding: 2px 0.5em;
       transition: opacity 100ms ease-in;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
 
       &:hover {
-        opacity: 0.6;
+        border-bottom: 3px solid #F00000;
       }
     }
 
@@ -56,14 +61,8 @@
     @extend .nav-links--show;
 
     &.animate {
-      transition: height 200ms ease-in, width 200ms ease-in,
-        border-radius ease-in 200ms;
-      border-bottom-left-radius: 150%;
-
       &.show {
-        border-bottom-left-radius: 0;
-        transition: height 300ms ease-out, width 300ms ease-out,
-          border-radius ease-out 300ms;
+        transition: height 300ms ease-out;
 
         @extend .nav-links--show;
       }

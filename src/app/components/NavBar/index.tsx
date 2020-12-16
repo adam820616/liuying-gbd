@@ -12,6 +12,7 @@ interface ThemeProps extends TProps {} // TODO fix rollup [name] is not exported
 
 interface NavbarProps {
   brand: JSX.Element
+  topLinks?: JSX.Element
   leftLinks?: JSX.Element
   rightLinks?: JSX.Element
   className?: string
@@ -23,6 +24,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({
   brand,
+  topLinks,
   leftLinks,
   rightLinks,
   theme = defaultTheme,
@@ -68,6 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({
         customClassName={menuClassName}
         isOpen={isToggled}
         shouldAnimate={shouldAnimate}
+        topLinks={topLinks}
         leftLinks={leftLinks}
         rightLinks={rightLinks}
       />
