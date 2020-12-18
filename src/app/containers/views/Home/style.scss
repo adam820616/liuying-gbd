@@ -29,6 +29,11 @@
   overflow:hidden;
 }
 
+.img-responsive img {
+  object-fit: contain;
+  width: 100%;
+}
+
 .w {
   padding-bottom:35%;
 }
